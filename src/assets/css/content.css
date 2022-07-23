@@ -1,0 +1,12 @@
+main {
+  text-align: justify;
+  padding: 1.5rem;
+  padding-top: 64px;
+  width: 72%;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+}

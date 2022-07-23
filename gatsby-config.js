@@ -6,5 +6,23 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: ["300", "400", "500", "600"],
+            },
+            {
+              family: "Open Sans",
+              variants: ["300", "400", "500"],
+            },
+          ],
+        },
+      },
+    },
+  ],
 }

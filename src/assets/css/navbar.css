@@ -1,0 +1,12 @@
+.navbar {
+  position: fixed;
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 64px;
+  width: 100vw;
+  background: #ffffffaa;
+  backdrop-filter: blur(5px);
+}

@@ -1,0 +1,26 @@
+body {
+  font-family: "Open Sans";
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat";
+}
+p {
+  text-align: justify;
+}
+
+.layout {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.layout-content {
+  display: flex;
+  padding-bottom: 140px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
