@@ -5,6 +5,7 @@ import React from "react"
 import Logo from "./Logo"
 import Menu from "./Menu"
 import MenuIcon from "./MenuIcon"
+import { Link } from "gatsby"
 
 /*CSS*/
 import "../assets/css/navbar.css"
@@ -12,12 +13,33 @@ import { useMenu } from "../hooks/useMenu"
 
 const Navbar = () => {
   const { isActive, handlerActive } = useMenu()
+  const menuRef = React.useRef(null)
+  const iconRef = React.useRef(null)
+
+  React.useEffect(() => {
+    const handler = e => {
+      if (
+        isActive &&
+        !menuRef.current.contains(e.target) &&
+        !iconRef.current.contains(e.target)
+      ) {
+        handlerActive()
+      }
+    }
+
+    document.addEventListener("mousedown", handler)
+
+    return () => {
+      document.removeEventListener("mousedown", handler)
+    }
+  }, [isActive])
 
   return (
     <div className="navbar">
       <Logo />
-      <Menu isActive={isActive} handlerActive={handlerActive} />
+      <Menu isActive={isActive} ref={menuRef} />
       <MenuIcon
+        ref={iconRef}
         color="#000000"
         handlerActive={handlerActive}
         isActive={isActive}

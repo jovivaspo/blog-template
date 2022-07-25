@@ -7,17 +7,17 @@ import "../assets/css/menu.css"
 
 const munuItems = ["home", "about", "contact"]
 
-const Menu = ({ isActive, handlerActive }) => {
-  const menuRef = React.useRef()
+const Menu = React.forwardRef((props, ref) => {
+  const { isActive } = props
 
   React.useEffect(() => {
     isActive
-      ? menuRef.current.classList.add("active")
-      : menuRef.current.classList.remove("active")
+      ? ref.current.classList.add("active")
+      : ref.current.classList.remove("active")
   }, [isActive])
 
   return (
-    <nav className="menu-container" ref={menuRef}>
+    <nav className="menu-container" ref={ref}>
       {munuItems.map((el, index) => {
         return (
           <ul key={index}>
@@ -29,6 +29,6 @@ const Menu = ({ isActive, handlerActive }) => {
       })}
     </nav>
   )
-}
+})
 
 export default Menu

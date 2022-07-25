@@ -7,7 +7,8 @@ import { useEffect } from "react"
 /*CSS*/
 import "../assets/css/menuIcon.css"
 
-const MenuIcon = ({ isActive, handlerActive, color }) => {
+const MenuIcon = React.forwardRef((props, ref) => {
+  const { isActive, handlerActive, color } = props
   const barRef = React.useRef()
   const XRef = React.useRef()
 
@@ -22,7 +23,7 @@ const MenuIcon = ({ isActive, handlerActive, color }) => {
   }, [isActive])
 
   return (
-    <button className="menu-btn" onClick={handlerActive}>
+    <button ref={ref} className="menu-btn" onClick={handlerActive}>
       <svg
         ref={barRef}
         xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +62,6 @@ const MenuIcon = ({ isActive, handlerActive, color }) => {
       </svg>
     </button>
   )
-}
+})
 
 export default MenuIcon
