@@ -13,8 +13,8 @@
   }
   .menu-icon {
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 4px;
+    right: 4px;
     transition: transform 0.3s ease-out 0s, opacity 0.3s ease-out 0s;
   }
   .menu-icon:hover {

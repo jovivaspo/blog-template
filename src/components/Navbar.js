@@ -11,14 +11,15 @@ import "../assets/css/navbar.css"
 import { useMenu } from "../hooks/useMenu"
 
 const Navbar = () => {
-  const { isActive, handleractive } = useMenu()
+  const { isActive, handlerActive } = useMenu()
+
   return (
     <div className="navbar">
       <Logo />
-      <Menu isActive={isActive} />
+      <Menu isActive={isActive} handlerActive={handlerActive} />
       <MenuIcon
         color="#000000"
-        handleractive={handleractive}
+        handlerActive={handlerActive}
         isActive={isActive}
       />
     </div>

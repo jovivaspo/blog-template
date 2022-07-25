@@ -4,6 +4,11 @@ main {
   padding-top: 64px;
   width: 72%;
 }
+main .img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (max-width: 768px) {
   main {

@@ -7,7 +7,7 @@ import "../assets/css/menu.css"
 
 const munuItems = ["home", "about", "contact"]
 
-const Menu = ({ isActive }) => {
+const Menu = ({ isActive, handlerActive }) => {
   const menuRef = React.useRef()
 
   React.useEffect(() => {
@@ -18,9 +18,9 @@ const Menu = ({ isActive }) => {
 
   return (
     <nav className="menu-container" ref={menuRef}>
-      {munuItems.map(el => {
+      {munuItems.map((el, index) => {
         return (
-          <ul>
+          <ul key={index}>
             <li>
               <Link to={el === "home" ? "/" : `/${el}`}>{el}</Link>
             </li>

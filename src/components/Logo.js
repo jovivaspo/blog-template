@@ -1,5 +1,6 @@
 /*MODULES*/
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 /*COMPONENTS*/
 
@@ -9,7 +10,7 @@ import "../assets/css/logo.css"
 const Logo = () => {
   return (
     <div className="logo-container">
-      <h1>Logo</h1>
+      <StaticImage src="../assets/images/Logo.png" alt="Logo de prueba" />
     </div>
   )
 }

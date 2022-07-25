@@ -1,11 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 export const useMenu = () => {
   const [isActive, setIsActive] = useState(false)
 
-  const handleractive = () => {
-    console.log(isActive)
+  const handlerActive = () => {
     setIsActive(!isActive)
   }
 
-  return { isActive, handleractive }
+  return { isActive, handlerActive }
 }

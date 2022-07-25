@@ -7,10 +7,9 @@ import { useEffect } from "react"
 /*CSS*/
 import "../assets/css/menuIcon.css"
 
-const MenuIcon = props => {
+const MenuIcon = ({ isActive, handlerActive, color }) => {
   const barRef = React.useRef()
   const XRef = React.useRef()
-  const { isActive } = props
 
   useEffect(() => {
     if (isActive) {
@@ -23,20 +22,19 @@ const MenuIcon = props => {
   }, [isActive])
 
   return (
-    <button className="menu-btn" onClick={props.handleractive}>
+    <button className="menu-btn" onClick={handlerActive}>
       <svg
         ref={barRef}
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2 menu-icon bars"
-        width={38}
-        height={38}
+        width={32}
+        height={32}
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke={props.color}
+        stroke={color}
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
-        {...props}
       >
         <path d="M0 0h24v24H0z" stroke="none" />
         <path d="M4 6h16M4 12h16M4 18h16" />
@@ -45,18 +43,18 @@ const MenuIcon = props => {
         ref={XRef}
         rotate="90deg"
         className="menu-icon X hidden"
-        width="38"
-        height="38"
-        stroke={props.color}
+        width="32"
+        height="32"
+        stroke={color}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g fill="none" fill-rule="evenodd">
           <path
-            fill={props.color}
+            fill={color}
             d="M10.858 12.272l15.87 15.87.756.756 1.414-1.414-.756-.756-15.87-15.87-.756-.756-1.414 1.414z"
           ></path>
           <path
-            fill={props.color}
+            fill={color}
             d="M28.142 12.272l-15.87 15.87-.756.756-1.414-1.414.756-.756 15.87-15.87.756-.756 1.414 1.414z"
           ></path>
         </g>
