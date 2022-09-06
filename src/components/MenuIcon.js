@@ -28,8 +28,8 @@ const MenuIcon = React.forwardRef((props, ref) => {
         ref={barRef}
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2 menu-icon bars"
-        width={32}
-        height={32}
+        width={42}
+        height={42}
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke={color}
@@ -44,8 +44,8 @@ const MenuIcon = React.forwardRef((props, ref) => {
         ref={XRef}
         rotate="90deg"
         className="menu-icon X hidden"
-        width="32"
-        height="32"
+        width="42"
+        height="42"
         stroke={color}
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -1,15 +1,26 @@
 .navbar {
-  position: fixed;
-  grid-area: navbar;
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  background: transparent;
+}
+
+.navbar-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 10;
+  padding: 1rem;
+}
 
-  height: 74px;
-  width: 100vw;
-  background: #ffffffaa;
-  backdrop-filter: blur(5px);
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
-    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+@media screen and (max-width: 768px) {
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

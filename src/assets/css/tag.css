@@ -1,0 +1,16 @@
+.container-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  background-color: black;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.container-tag p {
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

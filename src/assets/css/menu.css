@@ -14,7 +14,7 @@ li {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
 .menu-container a:hover {
@@ -37,6 +37,10 @@ li {
     background-color: #fff;
     transition: transform 0.3s ease-out 0s;
     transform: translate(-250%, 0%);
+  }
+
+  .menu-container a {
+    color: black;
   }
 
   .active {

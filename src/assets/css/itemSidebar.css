@@ -1,0 +1,12 @@
+.item-sidebar {
+  width: 98%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+.item-sidebar h4 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}

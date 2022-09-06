@@ -36,14 +36,16 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Logo />
-      <Menu isActive={isActive} ref={menuRef} />
-      <MenuIcon
-        ref={iconRef}
-        color="#000000"
-        handlerActive={handlerActive}
-        isActive={isActive}
-      />
+      <div className="navbar-content">
+        <Logo />
+        <Menu isActive={isActive} ref={menuRef} />
+        <MenuIcon
+          ref={iconRef}
+          color="#fff"
+          handlerActive={handlerActive}
+          isActive={isActive}
+        />
+      </div>
     </div>
   )
 }

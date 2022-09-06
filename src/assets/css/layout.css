@@ -18,10 +18,3 @@ p {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-.layout-content {
-  display: flex;
-  padding-bottom: 140px;
-  max-width: 1200px;
-  margin: 0 auto;
-}

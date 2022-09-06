@@ -1,0 +1,17 @@
+.full-content {
+  width: 100%;
+  display: flex;
+  margin-bottom: 140px;
+}
+
+.full-content section {
+  width: 75%;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .full-content section {
+    width: 98%;
+    margin: 0 auto;
+  }
+}

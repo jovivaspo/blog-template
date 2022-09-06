@@ -6,6 +6,10 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 /*COMPONENTS*/
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import Header from "../components/Header"
+import Sidebar from "../components/Sidebar"
+/*CSS*/
+import "../assets/css/postTemplate.css"
 
 const postTemplate = ({ data }) => {
   console.log("DATA", data)
@@ -48,13 +52,13 @@ const postTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <p>
-        <strong>{tag}</strong>
-      </p>
-      <GatsbyImage image={img} alt={description} />
-      <div>
-        {documentToReactComponents(content, renderOptions(content_images))}
+      <Header title={title} img={img} description={description} tag={tag} />
+      <div className="full-content">
+        <section>
+          {" "}
+          {documentToReactComponents(content, renderOptions(content_images))}
+        </section>
+        <Sidebar />
       </div>
     </Layout>
   )
@@ -71,7 +75,11 @@ export const query = graphql`
             file {
               url
             }
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(
+              layout: CONSTRAINED
+              quality: 100
+              cropFocus: CENTER
+            )
             contentful_id
             description
           }
