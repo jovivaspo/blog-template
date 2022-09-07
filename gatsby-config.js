@@ -34,11 +34,15 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Montserrat",
-              variants: ["300", "400", "500", "600"],
+              family: "Anton",
+              variants: ["400"],
             },
             {
-              family: "Open Sans",
+              family: "Libre Franklin",
+              variants: ["300", "400", "500"],
+            },
+            {
+              family: "Lato",
               variants: ["300", "400", "500"],
             },
           ],

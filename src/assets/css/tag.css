@@ -10,7 +10,8 @@
 
 .container-tag p {
   color: #fff;
-  font-size: 0.6rem;
+  font-family: "Lato";
+  font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
 }

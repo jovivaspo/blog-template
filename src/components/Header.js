@@ -10,7 +10,11 @@ import "../assets/css/header.css"
 const Header = ({ title, img, description, tag }) => {
   return (
     <header className="header">
-      <MainImage img={img} alt={description} />
+      <div className="content-main-image">
+        {" "}
+        <div className="gradient-image"></div>
+        <MainImage img={img} alt={description} />
+      </div>
       <div className="header-content">
         {tag && <Tag tag={tag} />}
         <Title title={title} />

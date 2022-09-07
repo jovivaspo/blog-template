@@ -1,12 +1,15 @@
 body {
-  font-family: "Open Sans";
+  font-family: "Lato";
+}
+p {
+  font-size: 18px;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Montserrat";
+  font-family: "Anton";
 }
 p {
   text-align: justify;
@@ -17,4 +20,10 @@ p {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
 }
